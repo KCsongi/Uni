@@ -34,7 +34,7 @@ public class Main {
 
         Game gta = new Game("Grand Theft Auto V", 1, "XBOX One");
         Game superMario = new Game("Super Márió", 6, "XBOX One");
-        Game cs = new Game("Counter Strike", 4, "XBOX One");
+        Game cs = new Game("Counter Strike", 4, "PC");
         List<Game> games = new ArrayList<>();
         games.add(gta);
         games.add(superMario);

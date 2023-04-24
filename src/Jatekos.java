@@ -42,12 +42,15 @@ public class Jatekos extends Console{
     public void jatszik() throws EltortKontroller, NemTamogatotJatek {
         for(Game game : games) {
             game(game, this.skill);
-            if(this.skill > game.getDifficultyLevel()) {
+            if (this.console != game.getSupportedConsole()) {
+                System.out.println("Nem támogatott felület");
+            } else if (this.skill > game.getDifficultyLevel()) {
                 this.skill++;
             } else {
                 System.out.println(this.name + "nevezetű játékos nem tudta végigjátszani " + game.getName() + " nevezetű játékot");
             }
         }
+
     }
 
     @Override
