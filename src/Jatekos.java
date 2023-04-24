@@ -6,10 +6,10 @@ import java.util.List;
 public class Jatekos extends Console{
     private String name;
     private int skill;
-    private List<Console> consoles;
+    private String console;
     private List<Game> games;
 
-    public Jatekos(Game game, String name, int skill, List<Console> consoles, List<Game> games) {
+    public Jatekos(Game game, String name, int skill, String console, List<Game> games) {
         super(game);
         this.name = name;
         if(skill < 0 ) {
@@ -19,7 +19,7 @@ public class Jatekos extends Console{
         } else {
             this.skill = skill;
         }
-        this.consoles = consoles;
+        this.console = console;
         this.games = games;
     }
 
@@ -39,10 +39,10 @@ public class Jatekos extends Console{
         this.skill = skill;
     }
 
-    public void jatszik(int skill) throws EltortKontroller, NemTamogatotJatek {
+    public void jatszik() throws EltortKontroller, NemTamogatotJatek {
         for(Game game : games) {
             game(game, this.skill);
-            if(this.skill > skill) {
+            if(this.skill > game.getDifficultyLevel()) {
                 this.skill++;
             } else {
                 System.out.println(this.name + "nevezetű játékos nem tudta végigjátszani " + game.getName() + " nevezetű játékot");
