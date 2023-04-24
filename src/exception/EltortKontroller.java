@@ -1,6 +1,6 @@
 package exception;
 
-public class EltortKontroller extends Exception{
+public class EltortKontroller extends Exception {
 
     public EltortKontroller() {
 

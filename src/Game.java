@@ -5,9 +5,9 @@ public class Game {
 
     public Game(String name, int difficultyLevel, String supportedConsole) {
         this.name = name;
-        if(difficultyLevel < 0) {
+        if (difficultyLevel < 0) {
             this.difficultyLevel = 0;
-        }else if(difficultyLevel > 10) {
+        } else if (difficultyLevel > 10) {
             this.difficultyLevel = 10;
         } else {
             this.difficultyLevel = difficultyLevel;

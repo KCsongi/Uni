@@ -1,7 +1,7 @@
 import exception.EltortKontroller;
 import exception.NemTamogatotJatek;
 
-public class Nintendo extends Console{
+public class Nintendo extends Console {
     private String name;
 
     public Nintendo() {
@@ -14,8 +14,8 @@ public class Nintendo extends Console{
     public void game(Game game, int skill) throws EltortKontroller, NemTamogatotJatek {
         NemTamogatotJatek e = new NemTamogatotJatek();
         EltortKontroller ex = new EltortKontroller();
-        if(game.getSupportedConsole().equalsIgnoreCase("Nintendo Wii")) {
-            if(game.getDifficultyLevel()  > skill) {
+        if (game.getSupportedConsole().equalsIgnoreCase("Nintendo Wii")) {
+            if (game.getDifficultyLevel() > skill) {
                 throw ex;
             } else {
                 System.out.println("Sikerült végigjátszani");

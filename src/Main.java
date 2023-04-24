@@ -1,14 +1,9 @@
 import exception.EltortKontroller;
 import exception.NemTamogatotJatek;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws FileNotFoundException, EltortKontroller, NemTamogatotJatek {
@@ -39,10 +34,10 @@ public class Main {
         games.add(gta);
         games.add(superMario);
         games.add(cs);
-        Jatekos jatekos = new Jatekos(gta, "Csongi",5,"XBOX One", games);
+        Jatekos jatekos = new Jatekos(gta, "Csongi", 5, "XBOX One", games);
 
         System.out.println(jatekos.getSkill());
-        jatekos.jatszik();
+        jatekos.game(games.get(0), 8);
         System.out.println(jatekos.getSkill());
 /*        String[] record = null;
         if(file.exists()) {

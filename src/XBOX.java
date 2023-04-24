@@ -1,8 +1,9 @@
 import exception.EltortKontroller;
 import exception.NemTamogatotJatek;
 
-public class XBOX extends Console{
+public class XBOX extends Console {
     private String name;
+
     public XBOX() {
         this.name = "XBOX One";
     }
@@ -11,8 +12,8 @@ public class XBOX extends Console{
     public void game(Game game, int skill) throws EltortKontroller, NemTamogatotJatek {
         NemTamogatotJatek e = new NemTamogatotJatek();
         EltortKontroller ex = new EltortKontroller();
-        if(game.getSupportedConsole().equalsIgnoreCase("XBOX One")) {
-            if((game.getDifficultyLevel()  + 2) > skill) {
+        if (game.getSupportedConsole().equalsIgnoreCase("XBOX One")) {
+            if ((game.getDifficultyLevel() + 2) > skill) {
                 throw ex;
             } else {
                 System.out.println("Sikerült végigjátszani");

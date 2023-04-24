@@ -3,7 +3,7 @@ import exception.NemTamogatotJatek;
 
 import java.util.List;
 
-public class Jatekos extends Console{
+public class Jatekos extends Console {
     private String name;
     private int skill;
     private String console;
@@ -12,7 +12,7 @@ public class Jatekos extends Console{
     public Jatekos(Game game, String name, int skill, String console, List<Game> games) {
         super(game);
         this.name = name;
-        if(skill < 0 ) {
+        if (skill < 0) {
             this.skill = 0;
         } else if (skill > 10) {
             this.skill = 10;
@@ -40,7 +40,7 @@ public class Jatekos extends Console{
     }
 
     public void jatszik() throws EltortKontroller, NemTamogatotJatek {
-        for(Game game : games) {
+        for (Game game : games) {
             game(game, this.skill);
             if (this.console != game.getSupportedConsole()) {
                 System.out.println("Nem támogatott felület");
