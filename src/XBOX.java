@@ -14,12 +14,12 @@ public class XBOX extends Console {
         EltortKontroller ex = new EltortKontroller();
         if (game.getSupportedConsole().equalsIgnoreCase("XBOX One")) {
             if ((game.getDifficultyLevel() + 2) > skill) {
-                throw ex;
+                System.out.println("Ez a játék túl nehéz neked. Eltörted a konrollered! " + ex);
             } else {
                 System.out.println("Sikerült végigjátszani");
             }
         } else {
-            throw e;
+            System.out.println("Ezzel sajnos nem tudsz játszani! " + e);
         }
     }
 }

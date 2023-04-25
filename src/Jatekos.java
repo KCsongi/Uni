@@ -9,8 +9,21 @@ public class Jatekos extends Console {
     private String console;
     private List<Game> games;
 
-    public Jatekos(Game game, String name, int skill, String console, List<Game> games) {
+/*    public Jatekos(Game game, String name, int skill, String console, List<Game> games) {
         super(game);
+        this.name = name;
+        if (skill < 0) {
+            this.skill = 0;
+        } else if (skill > 10) {
+            this.skill = 10;
+        } else {
+            this.skill = skill;
+        }
+        this.console = console;
+        this.games = games;
+    }*/
+
+    public Jatekos(String name, int skill, String console, List<Game> games) {
         this.name = name;
         if (skill < 0) {
             this.skill = 0;
@@ -43,11 +56,12 @@ public class Jatekos extends Console {
         for (Game game : games) {
             game(game, this.skill);
             if (this.console != game.getSupportedConsole()) {
-                System.out.println("Nem támogatott felület");
+                System.out.println("Sajnos ez a játék nem fut a te konzolodon");
             } else if (this.skill > game.getDifficultyLevel()) {
+                System.out.println("A " + game.getName() + " nevezetű játékot ügyesen végigjátszottad! " + this.skill + ". szintről " + (this.skill + 1) + ". szintre léptél");
                 this.skill++;
             } else {
-                System.out.println(this.name + "nevezetű játékos nem tudta végigjátszani " + game.getName() + " nevezetű játékot");
+                System.out.println(this.name + " nevezetű játékos nem tudta végigjátszani a " + game.getName() + " nevezetű játékot");
             }
         }
 

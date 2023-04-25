@@ -16,12 +16,12 @@ public class Nintendo extends Console {
         EltortKontroller ex = new EltortKontroller();
         if (game.getSupportedConsole().equalsIgnoreCase("Nintendo Wii")) {
             if (game.getDifficultyLevel() > skill) {
-                throw ex;
+                System.out.println("Ez a játék túl nehéz neked. Eltörted a konrollered! " + ex);
             } else {
                 System.out.println("Sikerült végigjátszani");
             }
         } else {
-            throw e;
+            System.out.println("Ezzel sajnos nem tudsz játszani! " + e);
         }
     }
 }
